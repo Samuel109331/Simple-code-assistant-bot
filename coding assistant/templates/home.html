@@ -118,7 +118,7 @@ fetch(`/api/generate/${temp}`)
                     // Display the codes 
                     const outputDiv = document.querySelector(".chat-log");
                    
-                    outputDiv.textContent += `<div class="message bot-message"><code>${data['codes']}</code></div>`;
+                    outputDiv.innerHTML += `<div class="message bot-message"><code>${data['codes']}</code></div>`;
                     
                 })
                 .catch(error => console.error('Error:', error));
